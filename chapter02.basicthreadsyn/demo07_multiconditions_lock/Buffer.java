@@ -64,7 +64,7 @@ public class Buffer {
 		lock.lock();
 		try {
 			while ((buffer.size() == 0) && hasPendingLines()) {
-				lines.await();	// 被lines.signalAll()唤醒
+				lines.await();	// 
 			}
 
 			if (hasPendingLines()) {
@@ -81,16 +81,10 @@ public class Buffer {
 		return line;
 	}
 
-	/**
-	 * 有生产者调用, 不会有更多的行数据
-	 */
 	public void setPendingLines(boolean pendingLines) {
 		this.pendingLines = pendingLines;
 	}
 
-	/**
-	 * 是否有更多的行数据要处理
-	 */
 	public boolean hasPendingLines() {
 		return pendingLines || buffer.size() > 0;
 	}

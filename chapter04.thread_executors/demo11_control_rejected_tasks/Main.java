@@ -18,12 +18,10 @@ public class Main {
 			executor.submit(task);
 		}
 
-		// 关闭执行者
 		System.out.printf("Main: Shuting down the Executor.\n");
 		executor.shutdown();
-		System.out.println("执行者状态：" + executor.isShutdown());
+		System.out.println("sHUTDOWN"：" + executor.isShutdown());
 
-		// 发送任务
 		System.out.printf("Main: Sending another Task.\n");
 		Task task = new Task("RejectedTask");
 		executor.submit(task);

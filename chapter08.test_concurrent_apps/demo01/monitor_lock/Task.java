@@ -13,7 +13,6 @@ public class Task implements Runnable {
 	@Override
 	public void run() {
 		for (int i = 0; i < 5; i++) {
-			// »ñÈ¡Ëø
 			lock.lock();
 
 			System.out.printf("%s: Get the  Lock.\n", Thread.currentThread().getName());
@@ -24,7 +23,6 @@ public class Task implements Runnable {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			} finally {
-				// ÊÍ·ÅËø
 				lock.unlock();
 			}
 		}

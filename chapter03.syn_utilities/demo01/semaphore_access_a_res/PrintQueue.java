@@ -23,7 +23,7 @@ public class PrintQueue {
 		
 			semaphore.acquire();
 			
-			System.out.println(name + " 获得信号量  at : " + sdf.format(new Date()));
+			System.out.println(name + " :: at : " + sdf.format(new Date()));
 
 			long duration = (long) (Math.random() * 10);
 			System.out.printf("%s: PrintQueue: Printing a Job during %d seconds\n", name,
@@ -35,7 +35,7 @@ public class PrintQueue {
 		} finally {
 			
 			
-			System.out.println(name + " 释放信号量  at : " + sdf.format(new Date()) + "\r\n");
+			System.out.println(name + " :: at : " + sdf.format(new Date()) + "\r\n");
 			semaphore.release();
 		}
 	}

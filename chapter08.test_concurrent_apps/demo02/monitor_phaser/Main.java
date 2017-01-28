@@ -13,7 +13,6 @@ public class Main {
 			thread.start();
 		}
 
-		// 输出Phaser的信息
 		for (int i = 0; i < 10; i++) {
 			System.out.printf("********************\n");
 			System.out.printf("Main: Phaser Log\n");

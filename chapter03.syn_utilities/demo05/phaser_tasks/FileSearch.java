@@ -90,7 +90,7 @@ public class FileSearch implements Runnable {
 
 	
 	/**
-	 * ¼ì²é½á¹û
+	 * 
 	 */
 	private boolean checkResults() {
 		if (results.isEmpty()) {

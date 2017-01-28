@@ -33,7 +33,6 @@ public class Main {
 	}
 
 	/**
-	 * 执行者的信息
 	 */
 	private static void showLog(ThreadPoolExecutor executor) {
 		System.out.printf("\r\n*********************");

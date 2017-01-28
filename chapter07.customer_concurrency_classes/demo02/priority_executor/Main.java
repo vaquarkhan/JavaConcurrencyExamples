@@ -20,7 +20,6 @@ public class Main {
 			e.printStackTrace();
 		}
 
-		// 发送4个任务
 		for (int i = 4; i < 8; i++) {
 			MyPriorityTask task = new MyPriorityTask("Task " + i, i);
 			executor.execute(task);

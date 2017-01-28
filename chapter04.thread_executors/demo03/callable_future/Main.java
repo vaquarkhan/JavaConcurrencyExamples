@@ -32,7 +32,7 @@ public class Main {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-		} while (executor.getCompletedTaskCount() < resultList.size());	// 等待任务结束
+		} while (executor.getCompletedTaskCount() < resultList.size());	// 
 
 		System.out.printf("Main: Results\n");
 		for (int i = 0; i < resultList.size(); i++) {

@@ -26,7 +26,7 @@ public class Account {
 		tmp += amount;
 		balance = tmp;
 		
-		System.out.println("´æ¿î£º" + balance);
+		System.out.println("::£º" + balance);
 	}
 
 	//

@@ -21,7 +21,7 @@ public class Cinema {
 	}
 
 	/**
-	 * Cinema1售票操作
+	 * Cinema1
 	 */
 	public boolean sellTickets1(int number) {
 		synchronized (controlCinema1) {
@@ -35,7 +35,7 @@ public class Cinema {
 	}
 
 	/**
-	 * Cinema2售票操作
+	 * Cinema2
 	 */
 	public boolean sellTickets2(int number) {
 		synchronized (controlCinema2) {

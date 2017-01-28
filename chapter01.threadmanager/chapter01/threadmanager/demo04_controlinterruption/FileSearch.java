@@ -40,7 +40,7 @@ public class FileSearch implements Runnable {
 					// 
 					directoryProcess(list[i]);
 				} else {
-					// нд╪Ч
+					// 
 					fileProcess(list[i]);
 				}
 			}

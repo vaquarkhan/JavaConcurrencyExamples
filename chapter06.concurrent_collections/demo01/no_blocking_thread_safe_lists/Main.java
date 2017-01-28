@@ -28,7 +28,6 @@ public class Main {
 		}
 		System.out.printf("Main: %d PollTask threads have been launched\n", threads.length);
 
-		// 等待线程结束
 		for (int i = 0; i < threads.length; i++) {
 			threads[i].join();
 		}

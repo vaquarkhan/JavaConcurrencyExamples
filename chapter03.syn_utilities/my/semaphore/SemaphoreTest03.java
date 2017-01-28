@@ -7,9 +7,9 @@ public class SemaphoreTest03 {
 	public static void main(String[] args) {
 		MyPool myPool = new MyPool(20);
 		ExecutorService threadPool = Executors.newFixedThreadPool(2);
-		MyThread t1 = new MyThread("任务A", myPool, 3);
-		MyThread t2 = new MyThread("任务B", myPool, 12);
-		MyThread t3 = new MyThread("任务C", myPool, 7);
+		MyThread t1 = new MyThread("A", myPool, 3);
+		MyThread t2 = new MyThread("B", myPool, 12);
+		MyThread t3 = new MyThread("C", myPool, 7);
 		threadPool.execute(t1);
 		threadPool.execute(t2);
 		threadPool.execute(t3);
@@ -48,12 +48,12 @@ class MyThread extends Thread {
 	public void run() {
 		try {
 			pool.getSp().acquire(x);
-			System.out.println(threadname + "成功获取了" + x + "个许可！");
+			System.out.println(threadname + ":" + x + "！");
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} finally {
 			pool.getSp().release(x);
-			System.out.println(threadname + "释放了" + x + "个许可！");
+			System.out.println(threadname + ":" + x + "！");
 		}
 	}
 }

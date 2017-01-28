@@ -18,7 +18,7 @@ public class ParkingCounter extends AtomicInteger {
 
 	public boolean carIn() {
 		for (;;) {
-			int value = get(); // 取得当前值
+			int value = get(); //
 			if (value == maxNumber) {
 				System.out.printf("ParkingCounter: The parking is full.\n");
 				return false;

@@ -15,9 +15,8 @@ public class PrintQueue {
 	public void printJob(Object document) {
 		
 		queueLock.lock();
-//		System.out.println("获得锁  at : " + new Date());
 		
-		System.out.println("获得锁  at : " + sdf.format(new Date()));
+		System.out.println("::  at : " + sdf.format(new Date()));
 
 		try {
 			long duration = (long) (Math.random() * 10000);
@@ -29,7 +28,7 @@ public class PrintQueue {
 			e.printStackTrace();
 		} finally {
 			
-			System.out.println("释放锁  at : " + sdf.format(new Date()) + "\r\n");
+			System.out.println("::  at : " + sdf.format(new Date()) + "\r\n");
 
 			queueLock.unlock();		
 		}
